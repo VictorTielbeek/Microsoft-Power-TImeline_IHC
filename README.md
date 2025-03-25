@@ -13,20 +13,12 @@ Este projeto apresenta uma linha do tempo interativa que descreve a evolução d
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+    git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://victortielbeek.github.io/Microsoft-Power-TImeline/)
     ```
 
 2. Navegue até o diretório do projeto:
     ```bash
-    cd nome-do-repositorio
+    cd Microsoft-Power-Timeline
     ```
 
 3. Abra o arquivo `index.html` no seu navegador para visualizar o projeto.
-
-## Deploy no GitHub Pages
-
-Se você deseja visualizar o projeto online, pode fazer o deploy do mesmo no **GitHub Pages** seguindo os passos abaixo:
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT.

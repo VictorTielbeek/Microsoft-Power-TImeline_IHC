@@ -1,0 +1,12 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3f2f1;
+    color: #323130;
+}
+.timeline .event:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+.card {
+    border-radius: 12px;
+}

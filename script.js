@@ -1,0 +1,1 @@
+console.log("Timeline da Microsoft Power Platform carregada!");

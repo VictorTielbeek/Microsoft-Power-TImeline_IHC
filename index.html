@@ -7,18 +7,36 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .timeline .event:hover {
+            transform: scale(1.08);
+            transition: transform 0.3s ease-in-out;
+            background-color: #e3f2fd;
+        }
+
+        .timeline .event {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .timeline .event.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
     <header class="bg-primary text-white text-center py-5">
         <h1 class="display-4 font-weight-bold">Evolução da Microsoft Power Platform</h1>
         <p class="lead">Acompanhe os marcos de evolução da Power Platform da Microsoft</p>
 
-        <!-- Informações do Criador -->
         <div class="creator-info mt-4">
             <p class="h5 font-weight-bold">Criado por:</p>
             <p class="h6 mb-1">Victor Tielbeek Gomes Nascimento</p>
             <p class="mb-0">Ciência da Computação - 5° Semestre</p>
             <p class="mb-0">UniCEUB</p>
+            <p class="mb-0">Contato: victor.tielbeek@sempreceub.com</p>
         </div>
     </header>
 
@@ -30,6 +48,7 @@
                 <li class="list-group-item"><a href="#event-2018" class="text-decoration-none text-primary">2018 - Power BI e Power Automate</a></li>
                 <li class="list-group-item"><a href="#event-2019" class="text-decoration-none text-primary">2019 - Power Virtual Agents</a></li>
                 <li class="list-group-item"><a href="#event-2020" class="text-decoration-none text-primary">2020 - Melhorias e Integrações</a></li>
+                <li class="list-group-item"><a href="#event-2024" class="text-decoration-none text-primary">2024 - Estado Atual da Power Platform</a></li>
             </ul>
         </div>
     </nav>
@@ -37,47 +56,53 @@
     <section class="container timeline">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <!-- Evento 2016 -->
                 <div class="event card shadow-lg p-4 mb-4" id="event-2016">
                     <h2 class="text-primary">2016 - PowerApps e Microsoft Flow</h2>
-                    <img src="images/powerapps_flow_2016.jpg" alt="PowerApps e Microsoft Flow" class="img-fluid mb-3 rounded-lg shadow-sm">
-                    <p><strong>2016 foi o ano em que a Microsoft revolucionou a maneira de criar aplicativos e automatizar processos de negócios com o lançamento do PowerApps e do Microsoft Flow (hoje conhecido como Power Automate).</strong> O PowerApps permitiu que usuários de todos os níveis de experiência criassem aplicativos móveis e de desktop personalizados, sem a necessidade de escrever código, tornando o desenvolvimento acessível e ágil para empresas de todos os tamanhos.</p>
-                    <p>O <strong>Microsoft Flow</strong>, por sua vez, foi uma solução poderosa para automação de fluxos de trabalho e integração de diversos serviços. Permitindo que ações automáticas fossem realizadas entre aplicativos da Microsoft e de terceiros, a plataforma abriu portas para uma grande redução de tarefas repetitivas e melhor aproveitamento do tempo. Essa combinação de soluções representou um marco na transformação digital, permitindo que empresas pudessem criar e automatizar suas operações com facilidade e sem custos elevados.</p>
+                    <p>O <strong>PowerApps</strong> foi lançado para permitir que usuários criassem aplicativos empresariais sem necessidade de programação complexa (<a href="https://powerapps.microsoft.com/">PowerApps</a>).</p>
+                    <p>O <strong>Microsoft Flow</strong> (agora Power Automate) trouxe automação de processos de forma intuitiva (<a href="https://powerautomate.microsoft.com/">Power Automate</a>).</p>
                 </div>
 
-                <!-- Evento 2018 -->
                 <div class="event card shadow-lg p-4 mb-4" id="event-2018">
                     <h2 class="text-primary">2018 - Power BI e Power Automate</h2>
-                    <img src="images/powerbi_2018.jpg" alt="Power BI e Power Automate" class="img-fluid mb-3 rounded-lg shadow-sm">
-                    <p><strong>Em 2018, a Microsoft fez uma grande evolução ao integrar os serviços PowerApps, Flow (Power Automate) e Power BI em uma plataforma única: a Power Platform.</strong> Isso significou que empresas poderiam agora, não só desenvolver aplicativos e automatizar processos, mas também obter insights valiosos sobre seus dados, tudo dentro do mesmo ecossistema.</p>
-                    <p>O <strong>Power BI</strong> trouxe uma capacidade de visualização de dados poderosa e intuitiva, permitindo que os usuários transformassem grandes volumes de dados brutos em gráficos e dashboards dinâmicos, facilitando a análise e a tomada de decisões em tempo real. Essa integração criou um ambiente colaborativo onde os negócios podiam desenvolver soluções completas que conectavam dados, análises e automação, tudo sem precisar de habilidades técnicas avançadas.</p>
+                    <p>O <strong>Power BI</strong> consolidou-se como ferramenta essencial para análise de dados e insights (<a href="https://powerbi.microsoft.com/">Power BI</a>).</p>
+                    <p>A integração total com o Power Automate fortaleceu os fluxos de trabalho automatizados.</p>
                 </div>
 
-                <!-- Evento 2019 -->
                 <div class="event card shadow-lg p-4 mb-4" id="event-2019">
                     <h2 class="text-primary">2019 - Power Virtual Agents</h2>
-                    <img src="images/power_virtual_agents_2019.jpg" alt="Power Virtual Agents" class="img-fluid mb-3 rounded-lg shadow-sm">
-                    <p><strong>Em 2019, a Microsoft adicionou uma nova ferramenta à Power Platform: o Power Virtual Agents.</strong> Essa solução permitiu que qualquer usuário, mesmo sem conhecimento de programação, criasse chatbots inteligentes que pudessem interagir com clientes ou realizar tarefas automatizadas. O Power Virtual Agents foi desenvolvido para ser extremamente intuitivo, com uma interface gráfica para construir conversas automatizadas, sem a necessidade de escrever código.</p>
-                    <p>Os chatbots, ou bots de conversação, tornaram-se uma parte essencial das empresas, especialmente no atendimento ao cliente, onde podem lidar com grandes volumes de interações de forma eficiente. Isso não só reduziu custos operacionais, como também melhorou a experiência do cliente, proporcionando respostas rápidas e precisas a qualquer momento.</p>
+                    <p>O <strong>Power Virtual Agents</strong> foi lançado para permitir a criação de chatbots inteligentes sem necessidade de programação (<a href="https://powervirtualagents.microsoft.com/">Power Virtual Agents</a>).</p>
                 </div>
 
-                <!-- Evento 2020 -->
                 <div class="event card shadow-lg p-4 mb-4" id="event-2020">
                     <h2 class="text-primary">2020 - Melhorias e Integrações</h2>
-                    <img src="images/ai_builder_2020.jpg" alt="AI Builder e Melhorias" class="img-fluid mb-3 rounded-lg shadow-sm">
-                    <p><strong>O ano de 2020 foi um marco de evolução e inovação dentro da Power Platform.</strong> A Microsoft introduziu o <strong>AI Builder</strong>, uma ferramenta que trouxe inteligência artificial (IA) acessível a todos, sem a necessidade de programação. Com o AI Builder, os usuários puderam criar aplicativos inteligentes, utilizando modelos de IA para reconhecimento de imagens, processamento de linguagem natural, previsão e muito mais, tudo de forma simples e visual.</p>
-                    <p>Além disso, a Microsoft continuou aprimorando a integração entre os produtos da Power Platform e outras soluções do ecossistema da Microsoft, como o Dynamics 365 e o Azure. Isso permitiu criar fluxos de trabalho ainda mais poderosos, com capacidades de IA e análise de dados em tempo real, garantindo uma maior sinergia entre as ferramentas e proporcionando uma solução ainda mais completa para empresas em diversos setores.</p>
+                    <p>Introdução do <strong>AI Builder</strong>, trazendo inteligência artificial acessível para a Power Platform (<a href="https://powerplatform.microsoft.com/en-us/ai-builder/">AI Builder</a>).</p>
+                </div>
+
+                <div class="event card shadow-lg p-4 mb-4" id="event-2024">
+                    <h2 class="text-primary">2024 - Estado Atual da Power Platform</h2>
+                    <p>A Microsoft Power Platform continua evoluindo com forte integração de IA, incluindo o uso do <strong>Copilot</strong> para automação inteligente e análise de dados avançada (<a href="https://powerplatform.microsoft.com/">Power Platform</a>).</p>
+                    <p>Expansão do ecossistema de conectores e maior adoção por empresas para digitalização de processos e otimização de fluxos de trabalho.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <p class="mb-2">© 2025 Victor Tielbeek Gomes Nascimento</p>
         <p class="mb-0">Todos os direitos reservados | UniCEUB</p>
     </footer>
 
+    <script>
+        document.addEventListener("scroll", function() {
+            let events = document.querySelectorAll(".timeline .event");
+            events.forEach(event => {
+                let position = event.getBoundingClientRect().top;
+                if (position < window.innerHeight - 100) {
+                    event.classList.add("visible");
+                }
+            });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
